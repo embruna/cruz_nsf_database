@@ -1,7 +1,6 @@
 # cruz nsf database
 
-[Database from Sen Ted Cruz](https://www.commerce.senate.gov/2025/2/cruz-led-investigation-uncovers-2-billion-in-woke-dei-grants-at-nsf-releases-full-database) purporting to find  
-billions spent on 'woke dei grants' at NSF".
+[Database from Sen Ted Cruz](https://www.commerce.senate.gov/2025/2/cruz-led-investigation-uncovers-2-billion-in-woke-dei-grants-at-nsf-releases-full-database) purporting to find billions spent on 'woke dei grants' at NSF".
 
 
 ### recipient type
@@ -17,7 +16,7 @@ involves “substantial staff involvement” from a federal agency.
 ### funding_office
 
 
- "div of biological infrastructure" ~ "DBI" # "Biological Infrastructure"
+ "div of biological infrastructure" ~ "DBI" # "Biological Infrastructure" 
  "division of environmental biology" ~ "DEB" # "Environmental Biology"
  "emerging frontiers" ~ "EF" # "Emerging Frontiers"
  "div of integrative organismal sys" ~ "IOS" # "Integrative Organismal Systems
