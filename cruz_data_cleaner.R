@@ -113,6 +113,7 @@ cruz<-cruz %>%
   ) %>% 
   mutate(nsf_source=tolower(nsf_source)) %>% 
   mutate(recipient_type=as.factor(recipient_type)) %>% 
+  mutate(award_descriptions=as.character(award_descriptions)) %>% 
   mutate(status_cat=if_else(is.na(status_cat),NA,"Y")) %>% 
   mutate(social_justice_cat=if_else(is.na(social_justice_cat),NA,"Y")) %>% 
   mutate(env_justice_cat=if_else(is.na(env_justice_cat),NA,"Y")) %>% 
