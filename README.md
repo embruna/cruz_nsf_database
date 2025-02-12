@@ -1,4 +1,7 @@
-# cruz_nsf_database
+# cruz nsf database
+
+[Database from Sen Ted Cruz](https://www.commerce.senate.gov/2025/2/cruz-led-investigation-uncovers-2-billion-in-woke-dei-grants-at-nsf-releases-full-database) purporting to find  
+billions spent on 'woke dei grants' at NSF".
 
 
 ### recipient type

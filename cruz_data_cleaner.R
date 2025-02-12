@@ -1,11 +1,8 @@
 
-# Database from:https://www.commerce.senate.gov/2025/2/cruz-led-investigation-uncovers-2-billion-in-woke-dei-grants-at-nsf-releases-full-database
-
 # note this code could be more efficient but I wanted ppl 
 # to be able to easily understand changes 
+# TODO: change remaining division names to abbreviations
 
-# TODO: change division names to abbreviations
-# TODO: read_me to list abbreviations
 
 # load libraries ----------------------------------------------------------
 
