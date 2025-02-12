@@ -65,26 +65,85 @@ cruz<-cruz %>%
              .default = as.factor(recipient_country_perf)
            )
   ) %>% 
-  
   mutate(recipient_type=
            case_when(
              recipient_type == "public/state controlled institution of higher education" ~ "public",
              recipient_type == "private institution of higher education" ~ "private",
-             recipient_type == "for-profit organization (other than small business)" ~ "for_profit_nonbis",
+             recipient_type == "for-profit organization (other than small business)" ~ "for_profit_nonbiz",
              recipient_type == "small business" ~ "small_biz",
              recipient_type == "non-domestic (non-u.s.) entity" ~ "non_usa_org",
              recipient_type == "indian/native american tribal designated organization" ~ "tribal_org",
              .default = as.factor(recipient_country_perf)
            )
   ) %>% 
+  mutate(nsf_source=
+           case_when(
+             funding_office == "div of biological infrastructure" ~ "DBI", # "Biological Infrastructure"
+             funding_office == "division of environmental biology" ~ "DEB", # "Environmental Biology"
+             funding_office == "emerging frontiers" ~ "EF", # "Emerging Frontiers"
+             funding_office == "div of integrative organismal sys" ~ "IOS", # "Integrative Organismal Systems
+             funding_office == "division of molecular and" ~ "MCB", # "Molecular and Cellular Biosciences" 
+             funding_office == "Computer and Information Science and Engineering" ~ "CISE",
+             funding_office == "ofc of adv cyberinfrastructure" ~ "OAC", # "Advanced Cyberinfrastructure"
+             funding_office == "div of computer  comm foundations"  ~ "CCF", # "Computing and Communication Foundations"
+             funding_office == "div of computer  network systems" ~ "CNS", # "Computer and Network Systems"
+             funding_office == "div of infor  intelligent systems" ~ "IIS", # "Information and Intelligent Systems"
+             funding_office == "division of chemical bioengineering" ~ "CBET", # "Chemical, Bioengineering, Environmental and Transport Systems"
+             funding_office == "div of civil, mechan  manuf innov" ~ "CMMI", # "Civil, Mechanical and Manufacturing Innovation"
+             funding_office == "division electrical, communication" ~ "ECCS", # "Electrical, Communications and Cyber Systems"
+             funding_office == "division of engineering education" ~ "EEC", # "Engineering Education and Centers"
+             funding_office == "office of emerging frontiers and" ~ "EFMA", # "Emerging Frontiers and Multidisciplinary Activities"
+             funding_office == "division of atmospheric and" ~ "AGS", # "Atmospheric and Geospace Sciences"
+             funding_office == "division of earth sciences"  ~ "EAR", # "Earth Sciences"
+             funding_office == "division of ocean sciences" ~ "OCE", # "Ocean Sciences"
+             funding_office == "office of polar programs" ~ "OPP", # "Polar Programs"
+             funding_office == "office of integrative activities" ~ "OIA", # "Integrative Activities"
+             funding_office == "ofc interntl science  eng" ~ "OISE", # "International Science and Engineering"
+             funding_office == "division of astronomical sciences" ~ "AST", # "Astronomical Sciences"
+             funding_office == "division of chemistry" ~ "CHE", # "Chemistry"
+             funding_office == "division of materials research" ~ "DMR", # "Materials Research"
+             funding_office == "division of mathematical sciences" ~ "DMS", # "Mathematical Sciences"
+             funding_office == "division of physics"  ~ "PHY", # "Physics"
+             funding_office == "div of social and economic science" ~ "SBE", # "Social, Behavioral and Economic Sciences"
+             funding_office == "div of behavioral  cognitive sci" ~ "BCS" ,
+             funding_office == "division of equity for excellence in stem" ~ "EES", # "Equity for Excellence in STEM"
+             funding_office == "division of graduate education"  ~ "DGE", # "Graduate Education"
+             funding_office == "div of research on learning in" ~ "DRL", # "Research on Learning in Formal and Informal Settings"
+             funding_office == "division of undergraduate education" ~ "DUE", # "Undergraduate Education"
+             funding_office == "Technology, Innovation and Partnerships" ~ "TIP",
+             .default = as.factor(funding_office)
+           )
+  ) %>% 
+  mutate(nsf_source=tolower(nsf_source)) %>% 
+  mutate(recipient_type=as.factor(recipient_type)) %>% 
   mutate(status_cat=if_else(is.na(status_cat),NA,"Y")) %>% 
   mutate(social_justice_cat=if_else(is.na(social_justice_cat),NA,"Y")) %>% 
   mutate(env_justice_cat=if_else(is.na(env_justice_cat),NA,"Y")) %>% 
   mutate(race_cat=if_else(is.na(race_cat),NA,"Y")) %>% 
   mutate(gender_cat=if_else(is.na(gender_cat),NA,"Y")) %>% 
-  relocate()
+  relocate(c(award_amount,
+             recipient_name,
+             recipient_city,
+             recipient_state,
+             recipient_type,
+             nsf_source,
+             funding_office,
+             award_descriptions),.after=1)
   
+
 
 # save the data as csv ----------------------------------------------------
 
 write_csv(cruz,here("data_clean","cruz_data_clean.csv"))
+
+
+
+
+
+
+
+
+
+
+
+
