@@ -4,6 +4,9 @@ library(stringr)
 
 cruz<-read_csv("./data_clean/cruz_data_clean.csv")
 
+career<-str_detect(cruz$summary, "career:")
+summary(career)
+
 cruz %>% summarize(n=n_distinct(award_id))
 
 
