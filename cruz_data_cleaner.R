@@ -126,7 +126,7 @@ cruz<-cruz %>%
              recipient_type,
              nsf_source,
              funding_office,
-             award_descriptions),.after=1)
+             summary=award_descriptions),.after=1)
   
 
 
