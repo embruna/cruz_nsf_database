@@ -1,7 +1,18 @@
 # cruz nsf database
 
-[Database from Sen Ted Cruz](https://www  commerce  senate  gov/2025/2/cruz-led-investigation-uncovers-2-billion-in-woke-dei-grants-at-nsf-releases-full-database) purporting to find  
-"billions spent on 'woke dei grants' at NSF"  
+Database from Sen Ted Cruz [linked here](https://www.commerce.senate.gov/2025/2/cruz-led-investigation-uncovers-2-billion-in-woke-dei-grants-at-nsf-releases-full-database) purporting to find "billions spent on 'woke dei grants' at NSF"  
+
+- [press release](https://www.commerce.senate.gov/2024/10/new-cruz-investigation-reveals-how-biden-harris-diverted-billions-from-scientific-research-to-dei-activists)  
+- [report with methodology](https://www.commerce.senate.gov/services/files/4BD2D522-2092-4246-91A5-58EEF99750BC)
+
+# LOLZ 
+
+"[funds] went to questionable projects that promoted diversity,
+equity, and inclusion (DEI) tenets or pushed onto science neo-Marxist perspectives about
+enduring class struggle. The Committee grouped these **grants into five categories: Status,
+Social Justice, Gender, Race, and Environmental Justice**. For the purposes for this report,
+“DEI funding,” a “DEI grant,” or “DEI research” refers to taxpayer dollars NSF provided to a
+research or engagement program that fell into one of these five groups."
 
 # Notes 
 
