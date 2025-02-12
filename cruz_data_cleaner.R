@@ -75,39 +75,49 @@ cruz<-cruz %>%
   ) %>% 
   mutate(nsf_source=
            case_when(
-             funding_office == "div of biological infrastructure" ~ "DBI", # "Biological Infrastructure"
-             funding_office == "division of environmental biology" ~ "DEB", # "Environmental Biology"
-             funding_office == "emerging frontiers" ~ "EF", # "Emerging Frontiers"
-             funding_office == "div of integrative organismal sys" ~ "IOS", # "Integrative Organismal Systems
-             funding_office == "division of molecular and" ~ "MCB", # "Molecular and Cellular Biosciences" 
+             funding_office == "div of biological infrastructure" ~ "DBI",
+             funding_office == "division of environmental biology" ~ "DEB",
+             funding_office == "emerging frontiers" ~ "EF",
+             funding_office == "div of integrative organismal sys" ~ "IOS",
+             funding_office == "division of molecular and" ~ "MCB",
              funding_office == "Computer and Information Science and Engineering" ~ "CISE",
-             funding_office == "ofc of adv cyberinfrastructure" ~ "OAC", # "Advanced Cyberinfrastructure"
-             funding_office == "div of computer  comm foundations"  ~ "CCF", # "Computing and Communication Foundations"
-             funding_office == "div of computer  network systems" ~ "CNS", # "Computer and Network Systems"
-             funding_office == "div of infor  intelligent systems" ~ "IIS", # "Information and Intelligent Systems"
-             funding_office == "division of chemical bioengineering" ~ "CBET", # "Chemical, Bioengineering, Environmental and Transport Systems"
-             funding_office == "div of civil, mechan  manuf innov" ~ "CMMI", # "Civil, Mechanical and Manufacturing Innovation"
-             funding_office == "division electrical, communication" ~ "ECCS", # "Electrical, Communications and Cyber Systems"
-             funding_office == "division of engineering education" ~ "EEC", # "Engineering Education and Centers"
-             funding_office == "office of emerging frontiers and" ~ "EFMA", # "Emerging Frontiers and Multidisciplinary Activities"
-             funding_office == "division of atmospheric and" ~ "AGS", # "Atmospheric and Geospace Sciences"
-             funding_office == "division of earth sciences"  ~ "EAR", # "Earth Sciences"
-             funding_office == "division of ocean sciences" ~ "OCE", # "Ocean Sciences"
-             funding_office == "office of polar programs" ~ "OPP", # "Polar Programs"
-             funding_office == "office of integrative activities" ~ "OIA", # "Integrative Activities"
-             funding_office == "ofc interntl science  eng" ~ "OISE", # "International Science and Engineering"
-             funding_office == "division of astronomical sciences" ~ "AST", # "Astronomical Sciences"
-             funding_office == "division of chemistry" ~ "CHE", # "Chemistry"
-             funding_office == "division of materials research" ~ "DMR", # "Materials Research"
-             funding_office == "division of mathematical sciences" ~ "DMS", # "Mathematical Sciences"
-             funding_office == "division of physics"  ~ "PHY", # "Physics"
-             funding_office == "div of social and economic science" ~ "SBE", # "Social, Behavioral and Economic Sciences"
+             funding_office == "ofc of adv cyberinfrastructure" ~ "OAC",
+             funding_office == "div of computer  comm foundations"  ~ "CCF",
+             funding_office == "div of computer  network systems" ~ "CNS",
+             funding_office == "div of infor  intelligent systems" ~ "IIS",
+             funding_office == "division of chemical bioengineering" ~ "CBET",
+             funding_office == "div of civil, mechan  manuf innov" ~ "CMMI",
+             funding_office == "division electrical, communication" ~ "ECCS",
+             funding_office == "division of engineering education" ~ "EEC", 
+             funding_office == "office of emerging frontiers and" ~ "EFMA", 
+             funding_office == "division of atmospheric and" ~ "AGS", 
+             funding_office == "division of earth sciences"  ~ "EAR", 
+             funding_office == "division of ocean sciences" ~ "OCE", 
+             funding_office == "office of polar programs" ~ "OPP",
+             funding_office == "office of integrative activities" ~ "OIA", 
+             funding_office == "ofc interntl science  eng" ~ "OISE",
+             funding_office == "division of astronomical sciences" ~ "AST", 
+             funding_office == "division of chemistry" ~ "CHE",
+             funding_office == "division of materials research" ~ "DMR", 
+             funding_office == "division of mathematical sciences" ~ "DMS",
+             funding_office == "division of physics"  ~ "PHY", 
+             funding_office == "div of social and economic science" ~ "SBE",
              funding_office == "div of behavioral  cognitive sci" ~ "BCS" ,
-             funding_office == "division of equity for excellence in stem" ~ "EES", # "Equity for Excellence in STEM"
-             funding_office == "division of graduate education"  ~ "DGE", # "Graduate Education"
-             funding_office == "div of research on learning in" ~ "DRL", # "Research on Learning in Formal and Informal Settings"
-             funding_office == "division of undergraduate education" ~ "DUE", # "Undergraduate Education"
+             funding_office == "division of equity for excellence in stem" ~ "EES", 
+             funding_office == "division of graduate education"  ~ "DGE", 
+             funding_office == "div of research on learning in" ~ "DRL", 
+             funding_office == "division of undergraduate education" ~ "DUE", 
              funding_office == "Technology, Innovation and Partnerships" ~ "TIP",
+             funding_office == "div of human resource development"  ~ "ART"
+             funding_office == "division of industrial innovation" ~ "IIP",
+             funding_office == "innovation and technology ecosystems" ~ "ITE",
+             funding_office == "integrative and collaborative" ~ "OIA",
+             funding_office == "mps multidisciplinary activities" ~ "OMA",
+             funding_office == "nat nanotechnology coordinating ofc" ~ "NNCO",
+             funding_office == "sbe office of multidisciplinary act" ~ "SMA",
+             funding_office == "strategic partnerships office" ~ "SPH",
+             funding_office == "technology frontiers" ~ "HTF",
+             funding_office == "translational impacts" ~ "ART",
              .default = as.factor(funding_office)
            )
   ) %>% 
