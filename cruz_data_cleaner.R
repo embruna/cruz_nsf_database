@@ -108,7 +108,7 @@ cruz<-cruz %>%
              funding_office == "div of research on learning in" ~ "DRL", 
              funding_office == "division of undergraduate education" ~ "DUE", 
              funding_office == "Technology, Innovation and Partnerships" ~ "TIP",
-             funding_office == "div of human resource development"  ~ "ART"
+             funding_office == "div of human resource development"  ~ "ART",
              funding_office == "division of industrial innovation" ~ "IIP",
              funding_office == "innovation and technology ecosystems" ~ "ITE",
              funding_office == "integrative and collaborative" ~ "OIA",
@@ -122,6 +122,7 @@ cruz<-cruz %>%
            )
   ) %>% 
   mutate(nsf_source=tolower(nsf_source)) %>% 
+  mutate(funding_office=tolower(funding_office)) %>% 
   mutate(recipient_type=as.factor(recipient_type)) %>% 
   mutate(award_descriptions=as.character(award_descriptions)) %>% 
   mutate(status_cat=if_else(is.na(status_cat),NA,"Y")) %>% 
