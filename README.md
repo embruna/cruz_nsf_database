@@ -18,21 +18,23 @@ research or engagement program that fell into one of these five groups."
 
 3484 awards, but only 3002 different projects (collaborative grants split the buudget to different institutions with different award numbers)
 
-### summary
+### `summary` column
 
-Originally "award_descriptions"
+This was called `award_descriptions` in the original `.xlsx` file.
 
-### recipient type
+### `recipient_type` column
 
 - they incorrectly coded non-profits (e  g  , Ecological Society of America) as "for-profit organization (other than small business)" (recoded as "for_profit_nonbiz")   
 
 
-### award_type
+### `award_type` column
 
 - cooperative agreements: funding mechanism for project that
 involves “substantial staff involvement” from a federal agency  
 
-### funding_office
+### `funding_office` column
+
+Their 'funding office' was a long text string, soetimes incomplete. I converted to an acronym for the relevant NSF Division, Program, or Office as follows: 
 
  "div of biological infrastructure" ~ "DBI" # "Biological Infrastructure"   
  "division of environmental biology" ~ "DEB" # "Environmental Biology"  
@@ -79,7 +81,7 @@ involves “substantial staff involvement” from a federal agency
  "div of human resource development"  ~ "ART" Division Human Resource Development (HRD)  
 
 
-#### Not in the database  
+#### The following NSF Divisions+ are not referenced in the original file but I include here should others wish to edit their forks
 
  "Biological Sciences" ~ "BIO"  
  "Geosciences" ~ "GEO"  
