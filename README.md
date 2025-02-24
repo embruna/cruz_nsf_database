@@ -5,7 +5,14 @@ Database from Sen Ted Cruz [linked here](https://www.commerce.senate.gov/2025/2/
 - [press release](https://www.commerce.senate.gov/2024/10/new-cruz-investigation-reveals-how-biden-harris-diverted-billions-from-scientific-research-to-dei-activists)  
 - [report with methodology](https://www.commerce.senate.gov/services/files/4BD2D522-2092-4246-91A5-58EEF99750BC)
 
-# LOLZ 
+
+## Notes 
+
+3484 awards, but only 3002 different projects (collaborative grants split the buudget to different institutions with different award numbers)
+
+## Column Name Changes or Notes
+
+### `status`, `social_justice`, `gender`, `race`, and `env_justice` columns 
 
 "[funds] went to questionable projects that promoted diversity,
 equity, and inclusion (DEI) tenets or pushed onto science neo-Marxist perspectives about
@@ -14,25 +21,24 @@ Social Justice, Gender, Race, and Environmental Justice**. For the purposes for 
 “DEI funding,” a “DEI grant,” or “DEI research” refers to taxpayer dollars NSF provided to a
 research or engagement program that fell into one of these five groups."
 
-# Notes 
 
-3484 awards, but only 3002 different projects (collaborative grants split the buudget to different institutions with different award numbers)
+### `summary` column
 
-### summary
+This was called `award_descriptions` in the original `.xlsx` file.
 
-Originally "award_descriptions"
-
-### recipient type
+### `recipient_type` column
 
 - they incorrectly coded non-profits (e  g  , Ecological Society of America) as "for-profit organization (other than small business)" (recoded as "for_profit_nonbiz")   
 
 
-### award_type
+### `award_type` column
 
 - cooperative agreements: funding mechanism for project that
 involves “substantial staff involvement” from a federal agency  
 
-### funding_office
+### `funding_office` column
+
+Their 'funding office' was a long text string, soetimes incomplete. I converted to an acronym for the relevant NSF Division, Program, or Office as follows: 
 
  "div of biological infrastructure" ~ "DBI" # "Biological Infrastructure"   
  "division of environmental biology" ~ "DEB" # "Environmental Biology"  
@@ -79,7 +85,7 @@ involves “substantial staff involvement” from a federal agency
  "div of human resource development"  ~ "ART" Division Human Resource Development (HRD)  
 
 
-#### Not in the database  
+#### The following NSF Divisions+ are not referenced in the original file but I include here should others wish to edit their forks
 
  "Biological Sciences" ~ "BIO"  
  "Geosciences" ~ "GEO"  
